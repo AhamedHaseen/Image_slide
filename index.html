@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider with Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#home">
+          <i class="fas fa-camera-retro me-2"></i>PhotoSlider
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">
+                <i class="fas fa-home me-1"></i>Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">
+                <i class="fas fa-user me-1"></i>About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#image">
+                <i class="fas fa-images me-1"></i>Image
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">
+                <i class="fas fa-shopping-cart me-1"></i>Product
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section with Image Slider -->
+    <section id="home" class="hero-section">
+      <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#imageCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#imageCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#imageCarousel"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#imageCarousel"
+            data-bs-slide-to="3"
+          ></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              class="d-block w-100"
+              alt="Mountain Landscape"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4 fw-bold">Beautiful Landscapes</h2>
+              <p class="lead">
+                Discover the world's most stunning natural wonders
+              </p>
+              <button class="btn btn-primary btn-lg">Explore Now</button>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+              class="d-block w-100"
+              alt="Forest Path"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4 fw-bold">Nature Adventures</h2>
+              <p class="lead">Experience the tranquility of forest trails</p>
+              <button class="btn btn-success btn-lg">Start Journey</button>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80"
+              class="d-block w-100"
+              alt="Ocean View"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4 fw-bold">Ocean Paradise</h2>
+              <p class="lead">
+                Dive into crystal clear waters and sandy beaches
+              </p>
+              <button class="btn btn-info btn-lg">Discover More</button>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1464822759844-d150e4598725?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              class="d-block w-100"
+              alt="Mountain Peak"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4 fw-bold">Peak Adventures</h2>
+              <p class="lead">
+                Conquer the highest peaks and enjoy breathtaking views
+              </p>
+              <button class="btn btn-warning btn-lg">Climb Higher</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-5 mb-4 heading-wave">About Us</h2>
+            <p class="lead mb-4 text-reveal">
+              We are passionate photographers and travelers who love capturing
+              the beauty of nature. Our mission is to share stunning landscapes
+              and inspire others to explore the world around them.
+            </p>
+            <div class="row">
+              <div class="col-md-4 mb-3 scroll-animate">
+                <i
+                  class="fas fa-camera fa-3x text-primary mb-3 icon-bounce"
+                ></i>
+                <h5>Professional Photography</h5>
+                <p>High-quality images captured with professional equipment</p>
+              </div>
+              <div class="col-md-4 mb-3 scroll-animate">
+                <i
+                  class="fas fa-map-marked-alt fa-3x text-success mb-3 icon-bounce"
+                ></i>
+                <h5>Global Locations</h5>
+                <p>Stunning photographs from around the world</p>
+              </div>
+              <div class="col-md-4 mb-3 scroll-animate">
+                <i class="fas fa-heart fa-3x text-danger mb-3 icon-bounce"></i>
+                <h5>Passion for Nature</h5>
+                <p>Dedicated to showcasing Earth's natural beauty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section id="image" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 heading-wave">Image Gallery</h2>
+          <p class="lead text-reveal">
+            Explore our collection of breathtaking photographs
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4 gallery-item">
+            <div class="card shadow-sm image-slide-left">
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                class="card-img-top"
+                alt="Forest"
+              />
+              <div class="card-body text-slide-right">
+                <h5 class="card-title">Enchanted Forest</h5>
+                <p class="card-text">A mysterious path through ancient woods</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 gallery-item">
+            <div class="card shadow-sm image-slide-left">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                class="card-img-top"
+                alt="Mountain"
+              />
+              <div class="card-body text-slide-right">
+                <h5 class="card-title">Majestic Peaks</h5>
+                <p class="card-text">Snow-capped mountains touching the sky</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 gallery-item">
+            <div class="card shadow-sm image-slide-left">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                class="card-img-top"
+                alt="Ocean"
+              />
+              <div class="card-body text-slide-right">
+                <h5 class="card-title">Ocean Serenity</h5>
+                <p class="card-text">Peaceful waves meeting the horizon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 heading-wave">Our Products</h2>
+          <p class="lead text-reveal">
+            High-quality prints and digital downloads available
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-4 product-slide">
+            <div class="card h-100 shadow">
+              <div class="card-body text-center">
+                <i
+                  class="fas fa-download fa-3x text-primary mb-3 icon-bounce"
+                ></i>
+                <h5 class="card-title">Digital Downloads</h5>
+                <p class="card-text">
+                  High-resolution digital images for personal use
+                </p>
+                <h4 class="text-primary">$9.99</h4>
+                <button class="btn btn-primary">Purchase</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 product-slide">
+            <div class="card h-100 shadow">
+              <div class="card-body text-center">
+                <i class="fas fa-print fa-3x text-success mb-3 icon-bounce"></i>
+                <h5 class="card-title">Canvas Prints</h5>
+                <p class="card-text">
+                  Professional canvas prints in various sizes
+                </p>
+                <h4 class="text-success">$49.99</h4>
+                <button class="btn btn-success">Order Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 product-slide">
+            <div class="card h-100 shadow">
+              <div class="card-body text-center">
+                <i
+                  class="fas fa-images fa-3x text-warning mb-3 icon-bounce"
+                ></i>
+                <h5 class="card-title">Photo Albums</h5>
+                <p class="card-text">
+                  Curated collections in premium photo books
+                </p>
+                <h4 class="text-warning">$99.99</h4>
+                <button class="btn btn-warning">Get Album</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><i class="fas fa-camera-retro me-2"></i>PhotoSlider</h5>
+            <p>&copy; 2025 PhotoSlider. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="social-links">
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-facebook fa-2x"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#" class="text-light"
+                ><i class="fab fa-twitter fa-2x"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Update active navigation item on scroll
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Scroll Animation Observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add animation class to trigger the animation
+            entry.target.classList.add("animate-in");
+
+            // Add staggered animation for child elements
+            const children = entry.target.querySelectorAll(
+              ".scroll-animate, .image-slide-left, .text-slide-right, .icon-bounce, .gallery-item, .product-slide, .heading-wave, .text-reveal"
+            );
+            children.forEach((child, index) => {
+              setTimeout(() => {
+                child.classList.add("animate-in");
+              }, index * 100); // 100ms delay between each element
+            });
+
+            // Unobserve after animation is triggered
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all animated elements when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        // Select all elements with animation classes
+        const animatedElements = document.querySelectorAll(
+          ".scroll-animate, .image-slide-left, .text-slide-right, .card-slide-left, .section-fade-up, .icon-bounce, .gallery-item, .product-slide, .heading-wave, .text-reveal"
+        );
+
+        animatedElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Special handling for sections
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      });
+
+      // Add parallax effect to carousel
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const carousel = document.querySelector("#imageCarousel");
+        if (carousel) {
+          const rate = scrolled * -0.5;
+          carousel.style.transform = `translateY(${rate}px)`;
+        }
+      });
+
+      // Enhanced card hover effects
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "translateY(-15px) rotateX(5deg)";
+          card.style.boxShadow = "0 20px 40px rgba(0,0,0,0.15)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(0) rotateX(0)";
+          card.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+        });
+      });
+
+      // Add typing effect for headings
+      function typeWriter(element, text, speed = 100) {
+        let i = 0;
+        element.innerHTML = "";
+        element.style.borderRight = "2px solid #007bff";
+
+        function type() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            element.style.borderRight = "none";
+          }
+        }
+        type();
+      }
+
+      // Initialize typing effect for main headings
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const mainHeading = document.querySelector("#about .display-5");
+          if (mainHeading && mainHeading.textContent) {
+            const originalText = mainHeading.textContent;
+            typeWriter(mainHeading, originalText, 150);
+          }
+        }, 1000);
+      });
+
+      // Add floating animation to icons
+      document.querySelectorAll(".fa-3x").forEach((icon) => {
+        icon.addEventListener("mouseenter", () => {
+          icon.style.animation = "float 2s ease-in-out infinite";
+        });
+
+        icon.addEventListener("mouseleave", () => {
+          icon.style.animation = "none";
+        });
+      });
+
+      // Create floating keyframe animation
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-10px) rotate(5deg); }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>

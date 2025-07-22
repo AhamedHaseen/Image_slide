@@ -1,0 +1,505 @@
+/* Custom Styles for Image Slider Website */
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+  color: #007bff !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 80%;
+}
+
+/* Hero Section / Carousel Styles */
+.hero-section {
+  margin-top: 0;
+}
+
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+  filter: brightness(0.8);
+  transition: all 0.5s ease;
+}
+
+.carousel-item:hover img {
+  filter: brightness(1);
+  transform: scale(1.02);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-caption h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+}
+
+.carousel-caption .btn {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 2px solid white;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active,
+.carousel-indicators button:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Section Styles */
+section {
+  padding: 80px 0;
+}
+
+.display-5 {
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  position: relative;
+}
+
+.display-5::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lead {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* About Section Icons */
+.fas.fa-3x {
+  transition: all 0.3s ease;
+}
+
+.fas.fa-3x:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-img-top {
+  transition: all 0.3s ease;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card-text {
+  color: #666;
+}
+
+/* Product Cards */
+.card h-100 {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card h-100 .btn {
+  padding: 10px 30px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.card h-100 .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Styles */
+.bg-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(135deg, #212529 0%, #343a40 100%) !important;
+}
+
+.social-links a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: #007bff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 50vh;
+  }
+
+  .carousel-caption {
+    padding: 20px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 40vh;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+/* Smooth Scrolling Enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.carousel-item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover Effects for Navigation */
+.navbar-dark .navbar-toggler {
+  border: none;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Custom Button Styles */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Scroll Animation Styles */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Different animation delays for staggered effects */
+.scroll-animate:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.scroll-animate:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.scroll-animate:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.scroll-animate:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Image specific animations */
+.image-slide-left {
+  opacity: 0;
+  transform: translateX(-80px) scale(0.9);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Text content animation from right */
+.text-slide-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-slide-right.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Card animations with different directions */
+.card-slide-left {
+  opacity: 0;
+  transform: translateX(-100px) rotateY(10deg);
+  transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+}
+
+/* Fade and slide up animation for sections */
+.section-fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.section-fade-up.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon animations */
+.icon-bounce {
+  opacity: 0;
+  transform: translateY(30px) scale(0.5);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-bounce.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Gallery images animation */
+.gallery-item {
+  opacity: 0;
+  transform: translateX(-60px) rotateX(15deg);
+  transition: all 0.8s ease-out;
+}
+
+.gallery-item.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateX(0deg);
+}
+
+/* Product cards slide animation */
+.product-slide {
+  opacity: 0;
+  transform: translateX(-120px) rotateZ(-5deg);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.product-slide.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateZ(0deg);
+}
+
+/* Beautiful wave effect for headings */
+.heading-wave {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.8s ease-out;
+}
+
+.heading-wave.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotateZ(1deg);
+  }
+  75% {
+    transform: translateY(5px) rotateZ(-1deg);
+  }
+}
+
+/* Parallax effect for background elements */
+.parallax-bg {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth reveal animation for text blocks */
+.text-reveal {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-reveal.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+  .scroll-animate,
+  .image-slide-left,
+  .text-slide-right {
+    transform: translateX(-50px);
+  }
+
+  .card-slide-left {
+    transform: translateX(-60px) rotateY(5deg);
+  }
+
+  .product-slide {
+    transform: translateX(-80px) rotateZ(-3deg);
+  }
+}
